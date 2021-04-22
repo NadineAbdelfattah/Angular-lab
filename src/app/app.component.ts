@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lab3';
+  DataParent:string="Data from parent";
+  DataFromLoginParent:any;
+  // studet:any;
+  students:{ name: string; age: number; } []=[]
+  ReceiveData(data:any){
+    // console.log(data);
+    // this.studet=data;
+    this.students.push(data);
+  }
 }

@@ -1,0 +1,16 @@
+<!-- <p>student works!</p> -->
+<div>
+    <h2 class="text-center">Students</h2>
+    <table class="table table-info text-center">
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of listOfStudents">
+                <td>{{s.name}}</td>
+                <td>{{s.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

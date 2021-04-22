@@ -1,0 +1,34 @@
+<h2>Registration</h2>
+<div>
+<input type="text" [(ngModel)]="name" placeholder="Name">
+<input type="text" [(ngModel)]="age" placeholder="Age">
+
+<!-- <div *ngIf="age < 18">
+    <input type="button" value="Add" (click)="add()" disabled>
+</div>
+
+<div *ngIf="age > 18">
+    <input type="button" value="Add" (click)="add()">
+</div> -->
+<!-- <input type="button" value="Add" (click)="add()"> -->
+<div *ngIf="age > 18; else less18Block">
+    <input type="button" value="Add" (click)="add()">
+</div>
+<ng-template #less18Block>
+<div>
+    <input type="button" value="Add" (click)="add()" disabled>
+</div>
+</ng-template>
+</div>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of students">
+            <td>{{s.name}}</td>
+            <td>{{s.age}}</td>
+        </tr>
+    </tbody>
+</table>

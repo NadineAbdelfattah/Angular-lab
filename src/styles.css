@@ -49,3 +49,6 @@ td,th{
     color: aliceblue;
 }
  */
+.active{
+    color: red;
+}

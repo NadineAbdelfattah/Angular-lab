@@ -9,5 +9,30 @@
     data:{{DataFromLoginParent}}
 </div> -->
 
-<app-registration (myEvent)="ReceiveData($event)"></app-registration>
-<app-student [sss]="students"></app-student>
+<!-- <app-registration (myEvent)="ReceiveData($event)"></app-registration> -->
+<!-- <app-student [sss]="students"></app-student> -->
+<!-- <app-student [OS]="student"></app-student> -->
+<!-- <div class="container">
+    <div class="row">
+        <div class="col">
+            
+            <ul>
+                <li><a [routerLinkActiveOptions]='{ exact:true }' routerLinkActive="active" routerLink="employees">Employees</a></li>
+                <li><a routerLinkActive="active" routerLink="employees/20">Employees Details</a></li>
+                <li><a routerLinkActive="active" routerLink="about">About</a></li>
+                <li><a routerLinkActive="active" routerLink="profile">Profile</a></li>
+                <li><a routerLinkActive="active" routerLink="sdfg">Error</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+ <app-validators></app-validators> 
+<router-outlet></router-outlet>-->
+
+<!--Day5-->
+<ul>
+   <li><a [routerLinkActiveOptions]='{ exact:true }' routerLinkActive="active" routerLink="users">Users</a></li>
+                <li><a routerLinkActive="active" routerLink="users/20">User Details</a></li>
+                <li><a routerLinkActive="active" routerLink="sdfg">Error</a></li>
+</ul>
+<router-outlet></router-outlet>

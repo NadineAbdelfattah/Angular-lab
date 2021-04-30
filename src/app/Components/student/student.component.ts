@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-student',
@@ -6,12 +6,24 @@ import { Component, OnInit, Input } from '@angular/core';
   styles: [
   ]
 })
-export class StudentComponent implements OnInit {
+export class StudentComponent implements OnInit ,OnChanges {
 
   constructor() { }
+  ngOnChanges(changes:any): void {
+    console.log(changes);
+    // if(!changes.OneStudents.firstChange){
+    //   this.students.push(this.OneStudents);
+    // }
+   
+    if(changes.OneStudents.currentValue){
+        this.students.push(this.OneStudents);
+    }
+    // this.students.push(this.OneStudents);
+  }
 
   ngOnInit(): void {
   }
-  @Input('sss') listOfStudents:any;
-
+  // @Input('sss') listOfStudents:any;
+  @Input('OS') OneStudents:any;
+  students:{name:string,age:number}[]=[]
 }
